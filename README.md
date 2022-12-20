@@ -1,6 +1,8 @@
 ## babel-plugin-development-template
 
-### Use
+![build](https://github.com/freeshineit/babel-plugin-development-template/workflows/build/badge.svg)
+
+### Development
 
 ```bash
 # clone and install
@@ -16,9 +18,19 @@ yarn run build
 npm publish --access public
 ```
 
-### Rename
+### Use
+
+- `babel.config.json`
+  
+```json
+{
+    "plugins": ["babel-plugin-development-template"]
+}
+```
+
+<!-- ### Rename
 
 - `jest.config.js`文件下别名，更新`moduleNameMapper`
 - `tsconfig.json`文件下别名，更新`paths`
-- `src/__tests__/`下文件
+- `src/__tests__/`下文件 -->
 
