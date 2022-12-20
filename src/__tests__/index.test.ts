@@ -8,7 +8,7 @@ describe('test', () => {
     const code = `
             const g = 100;
         
-            if (DEBUG) {
+            if (__DEV__) {
                 const a =10;
                 console.log(a)
             }
