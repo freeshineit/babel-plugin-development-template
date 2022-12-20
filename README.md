@@ -28,6 +28,8 @@ npm publish --access public
 }
 ```
 
+[codesandbox](https://codesandbox.io/s/bold-sun-npmb0m?file=/.babelrc)
+
 <!-- ### Rename
 
 - `jest.config.js`文件下别名，更新`moduleNameMapper`
