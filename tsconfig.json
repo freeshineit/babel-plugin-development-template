@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "module": "commonjs",
+        "checkJs": false,
+        "rootDir": "./",
+        "strict": false,
+        "noImplicitAny": false,
+        "strictNullChecks": false,
+        "strictFunctionTypes": false,
+        "strictBindCallApply": false,
+        "strictPropertyInitialization": false,
+        "noImplicitThis": false,
+        "alwaysStrict": false,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": false,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "forceConsistentCasingInFileNames": true,
+        "baseUrl": ".",
+        "paths": {
+            "babel-plugin-development-template": ["./src/index.ts"]
+        }
+    },
+    "exclude": ["./node_modules"],
+    "include": ["./src/**/*.ts"]
+}

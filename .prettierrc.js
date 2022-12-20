@@ -8,12 +8,4 @@ module.exports = {
   quoteProps: 'preserve',
   arrowParens: 'avoid',
   proseWrap: 'preserve',
-  overrides: [
-    {
-      'files': ['*.md'],
-      'options': {
-        embeddedLanguageFormatting: 'off',
-      },
-    },
-  ],
 }

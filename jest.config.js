@@ -79,9 +79,9 @@ module.exports = {
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json'],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {
-  //   '^.+\\.(css|sass|scss)$': 'identity-obj-proxy',
-  // },
+  moduleNameMapper: {
+    '^babel-plugin-development-template$': '<rootDir>/src/index.ts',
+  },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
@@ -93,7 +93,7 @@ module.exports = {
   // notifyMode: "failure-change",
 
   // A preset that is used as a base for Jest's configuration
-  // preset: 'ts-jest',
+  preset: 'ts-jest',
 
   // Run tests from one or more projects
   // projects: undefined,
@@ -153,6 +153,7 @@ module.exports = {
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   transform: {
+    '^.+\\.(ts|tsx)?$': 'ts-jest',
     '^.+\\.(js|jsx)$': [
       'babel-jest',
       {

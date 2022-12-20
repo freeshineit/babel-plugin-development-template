@@ -1,3 +1,7 @@
+/**
+ *
+ * @returns
+ */
 export default function () {
   return {
     name: 'debug',
@@ -6,7 +10,7 @@ export default function () {
     visitor: {
       // https://astexplorer.net/
       // 标识符
-      Identifier(path, state) {
+      Identifier(path: any, state: any) {
         // console.log("type Identifier: ", path.node);
         // console.log("path.parentPath:", path.parentPath);
         if (path.node.name === 'DEBUG' && path.parent.type === 'IfStatement') {
@@ -14,7 +18,7 @@ export default function () {
           path.parentPath.remove()
         }
       },
-      StringLiteral(path) {
+      StringLiteral(path: any) {
         // console.log('type StringLiteral: ', path.node)
       },
     },
