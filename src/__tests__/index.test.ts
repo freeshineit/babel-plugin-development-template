@@ -1,6 +1,6 @@
 import { transformSync, transform } from '@babel/core'
-import { join } from 'path'
-import { readdirSync, readFileSync } from 'fs'
+// import { join } from 'path'
+// import { readdirSync, readFileSync } from 'fs'
 import plugin from 'babel-plugin-development-template'
 
 describe('test', () => {
