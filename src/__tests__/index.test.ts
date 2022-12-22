@@ -4,6 +4,7 @@ import { transformSync, transform } from '@babel/core'
 import plugin from 'babel-plugin-development-template'
 
 describe('test', () => {
+  // if 判断
   it(`expect generate code`, () => {
     const code = `
             const g = 100;
