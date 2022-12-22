@@ -7,7 +7,7 @@ export interface Options {}
 /**
  * https://babeljs.io/docs/en/plugins/
  * Babel 的编译流程主要分为三个部分：解析（parse），转换（transform），生成（generate）
- * code -> AST -> transformed AST -> transformed code
+ * source code -> AST -> transformed AST -> generate target code and sourcemap
  * 插件开发主要是对 AST 进行增删改查
  *
  * @param {PluginAPI} api 一个对象，包含了 types (@babel/types)、traverse (@babel/traverse)、template(@babel/template) 等实用方法，
@@ -16,7 +16,7 @@ export interface Options {}
  * @param {string} dirname 目录名。
  * @return {PluginObj}  {PluginObj}
  */
-export default function (api, options?: Options, dirname?): PluginObj {
+export default function (api, options: Options, dirname: string): PluginObj {
   // 断言 babel7
   api.assertVersion(7)
 
