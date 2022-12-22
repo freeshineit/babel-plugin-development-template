@@ -27,7 +27,8 @@ describe('test', () => {
     )
   })
 
-  it(`expect generate code 2`, () => {
+  // 条件表达式
+  it(`expect generate code (ConditionalExpression)`, () => {
     const code = `
             const g = 100;
 
@@ -49,7 +50,8 @@ describe('test', () => {
     )
   })
 
-  it(`expect generate code 3`, () => {
+  // 逻辑表达式
+  it(`expect generate code (LogicalExpression)`, () => {
     const code = `
             const g = 100;
 
