@@ -47,8 +47,10 @@ export default function (api, options: Options, dirname: string): PluginObj {
           path.node.name === '__DEV__' &&
           path.parent.type === 'IfStatement'
         ) {
-          // t.remove(path.parent);
           path.parentPath.remove()
+        } else if (path.node.name === '__DEV__') {
+          // path.node.id = api.types.Identifier('false')
+          path.replaceWith(api.types.Identifier('false'))
         }
       },
       // 字符串文字
