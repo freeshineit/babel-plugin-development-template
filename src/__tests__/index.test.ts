@@ -8,14 +8,14 @@ describe('test', () => {
   it(`expect generate code`, () => {
     const code = `
             const g = 100;
-        
+
             if (__DEV__) {
                 const a =10;
                 console.log(a)
             }
-        
+
             console.log(g)
-        
+
             const str = 'this is string'
         `
     const babelConfig = {
@@ -66,6 +66,32 @@ describe('test', () => {
         `
     const babelConfig = {
       plugins: [plugin],
+    }
+    const output = transformSync(code, babelConfig)
+    // console.log('output.code: ', output.code)
+    expect(output.code).toEqual(
+      `const g = 100;\nlet a = false && {\n  key: 'a'\n};\nconsole.log(g);\nconst str = 'this is string';`
+    )
+  })
+
+  // 逻辑表达式 options 参数
+  it(`expect generate code (LogicalExpression)， options 参数`, () => {
+    const code = `const g = 100;
+              let a = __DEV__ && {
+                key: 'a'
+              }
+              console.log(g)
+              const str = 'this is string'
+          `
+    const babelConfig = {
+      plugins: [
+        [
+          plugin,
+          {
+            pluginParam: 'plugin-param',
+          },
+        ],
+      ],
     }
     const output = transformSync(code, babelConfig)
     // console.log('output.code: ', output.code)
