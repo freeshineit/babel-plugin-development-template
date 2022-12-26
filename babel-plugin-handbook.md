@@ -41,7 +41,7 @@
 - [编写你的第一个 Babel 插件](#编写你的第一个-babel-插件)
 - [转换操作](#转换操作)
   - [访问](#访问)
-    - [获取子节点的 Path](#获取子节点的path)
+    - [获取子节点的 Path](#获取子节点的-path)
     - [检查节点的类型](#检查节点的类型)
     - [检查路径（Path）类型](#检查路径path类型)
     - [检查标识符（Identifier）是否被引用](#检查标识符identifier是否被引用)
@@ -1501,8 +1501,8 @@ FunctionDeclaration(path) {
   path.parentPath.replaceWith(
     t.expressionStatement(t.stringLiteral("Anyway the wind blows, doesn't really matter to me, to me."))
   );
-}
-`</pre>
+}</code>
+</pre>
 
 ```diff
   function square(n) {
